@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="blog-container">
+    <h1 class="blog-title">🌿 Bienvenue sur notre Blog</h1>
+    {% if posts %}
+    {% for post in posts %}
+    <div class="post">
+        <h2 class="post-title">{{ post.title }}</h2>
+        <div class="post-content">
+            <img src="{{ post.image.url }}" alt="{{ post.title }}" class="post-image">
+            <p>{{ post.content }}</p>
+        </div>
+        <p class="post-meta">
+            Publié le <span>{{ post.date }}</span> par <span>{{ post.author }}</span>
+        </p>
+    </div>
+    {% endfor %}
+    {% endif %}
+
+</div>
+{% comment %} 
+<div class="container">
+    <h1>Page de Blog</h1>
+    
+    {% if posts %}
+        <div class="blog-post">
+            <h2 class="blog-post-title">{{ posts.0.title }}</h2>
+            <div class="blog-post-meta">
+                <span>Publié le {{ posts.0.date }} par {{ posts.0.author }}</span>
+            </div>
+            <div class="blog-post-content">
+                {{ posts.0.content }}
+            </div>
+        </div>
+    {% else %}
+        <p>Aucun article de blog disponible.</p>
+    {% endif %}
+</div> {% endcomment %}
+{% endblock %}
