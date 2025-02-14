@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-02-14 16:25+0100\n"
+"POT-Creation-Date: 2025-02-14 17:18+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -35,6 +35,10 @@ msgstr ""
 "any assignments you may have to entrust to me🚀. I look forward to your call "
 "so that we can work together🤝."
 
+#: .\blog\templates\about.html:26
+msgid "Mon CV"
+msgstr "My CV"
+
 #: .\blog\templates\base.html:17
 msgid "Accueil"
 msgstr "Home"
@@ -47,11 +51,11 @@ msgstr "Blog"
 msgid "A propos"
 msgstr "About me"
 
-#: .\blog\templates\blog.html:5
+#: .\blog\templates\blog.html:6
 msgid "🌿 Bienvenue sur notre Blog"
 msgstr "🌿 Welcome to our Blog"
 
-#: .\blog\templates\blog.html:14
+#: .\blog\templates\blog.html:15
 msgid "Lire la suite"
 msgstr "More"
 
@@ -71,23 +75,23 @@ msgstr ""
 msgid "Visiter le Blog"
 msgstr "Visit the Blog"
 
-#: .\blog\templates\post_details.html:5
+#: .\blog\templates\post_details.html:6
 msgid "page de details"
 msgstr "details page"
 
-#: .\blog\templates\post_details.html:17
+#: .\blog\templates\post_details.html:16
 msgid "Publié le"
 msgstr "Published on"
 
-#: .\blog\templates\post_details.html:18
+#: .\blog\templates\post_details.html:17
 msgid "Dernière modification le"
 msgstr "Last modified on"
 
-#: .\blog\templates\post_details.html:19
+#: .\blog\templates\post_details.html:18
 msgid "Par"
 msgstr "By"
 
-#: .\blog\templates\post_details.html:20
+#: .\blog\templates\post_details.html:19
 msgid "Retour"
 msgstr "Back"
 
