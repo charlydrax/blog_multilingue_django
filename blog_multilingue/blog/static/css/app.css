@@ -1,18 +1,116 @@
+:root {
+    --vert-nature: #2ecc71;
+    --vert-fonce: #27ae60;
+    --gris-clair: #f5f5f5;
+    --blanc: #ffffff;
+}
+*,*::after,*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 /* Import d'une police élégante */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
 
 body {
     font-family: 'Poppins', sans-serif;
-    background-color: #f5f5f5;
+    /* background-color: #f5f5f5; */
+    background-color: #d7d7d7;
     margin: 0;
     padding: 0;
     color: #333;
 }
-
-.blog-container {
+.container_home{
+    display: flex;
+    flex-direction: column;
     max-width: 800px;
-    margin: 40px auto;
+    margin: 50px auto;
+    background: white;
     padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    max-width: 170px;
+    text-align: center;
+    background-color: #28a745;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 18px;
+}
+.btn:hover {
+    background-color: #218838;
+}
+.hero-image {
+    /* width: 30vw; */
+    height: auto;
+    margin: auto;
+    width: 200px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+header{
+    height: 10vh;
+}
+nav {
+    background-color: var(--vert-nature);
+    padding: 15px 0;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: var(--blanc);
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: var(--gris-clair);
+}
+.select_lang{
+    background: var(--vert-nature);
+    color: var(--blanc);
+    font-weight: bold;
+    font-size: medium;
+    border: none;
+    cursor: pointer;
+}
+.container_select{
+    position: relative;
+}
+.after_select::after{
+    position: absolute;
+    content: "";
+    z-index: 1;
+    left: 72px;
+    top: 0px;
+    height: 20px;
+    width: 20px;
+    background: var(--vert-nature);
+}
+main {
+    flex-grow: 1;
+    padding: 20px;
+    height: 80vh;
+}
+.blog-container {
+    max-width: 700px;
+    margin: 40px auto;
+    padding: 45px;
     background: #fff;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -22,7 +120,7 @@ body {
     text-align: center;
     color: #2d6a4f; /* Vert naturel */
     font-size: 28px;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
 }
 
 .post {
@@ -68,6 +166,62 @@ body {
     line-height: 1.6;
     color: #333;
 }
+/* About */
+.svg_arrow{
+    position: relative;
+    top: 15px;
+    transform: translateY(-50%) rotate(-50deg);
+    color: var(--vert-nature);
+}
+a{
+    text-decoration: none;
+    color: var(--vert-nature);
+    font-weight: bold;
+}
+.margin_link{
+    margin-bottom: 10px;
+    margin-top: 5px;
+}
+.underline, .underline_2 {
+    position: relative; /* Permet à ::after d'être positionné par rapport à .underline */
+    display: block; /* Pour éviter que le soulignement ne prenne toute la largeur */
+}
+.underline::after, .underline_2::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    height: 2px; /* Épaisseur du soulignement */
+    background: var(--vert-nature);
+    transform: scaleX(0); /* Masque la ligne au départ */
+    transform-origin: left; /* Démarre l'animation depuis la gauche */
+}
+.underline::after{
+    width: 270px;
+    transition: transform 0.6s ease-in-out;
+}
+.underline_2::after{
+    width: 65px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.underline:hover::after, .underline_2:hover::after {
+    transform: scaleX(1); /* Affiche la ligne */
+}
+
+/* Footer */
+footer {
+    /* background-color: var(--vert-fonce); */
+    background-color: var(--vert-nature);
+    color: var(--blanc);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 10vh;
+}
+
 
 /* Responsive */
 @media (max-width: 768px) {

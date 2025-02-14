@@ -1,5 +1,13 @@
 {% extends 'base.html'%}
+{% load i18n %}
+
 {% block content %}
-    <h1>page de d'accueil</h1>
-    <p> Bienvenue sur le site de l'aventure d'un jardin, nous vous invitions à consulter notre blog sur les nain de jardin😁</p>
+    <main>
+    <div class="container_home">
+        <h1>{% trans "Bienvenue sur notre Blog des Nains de Jardin 🏡!" %}</h1>
+        <p>{% blocktranslate %}Découvrez le monde fascinant des nains de jardin à travers des articles captivants et des histoires surprenantes.{% endblocktranslate %}</p>
+        <img src="media/maison_jardin.jpg" alt="Nain de jardin" class="hero-image">
+        <a href="/blog" class="btn">{% trans "Visiter le Blog" %}</a>
+    </div>
+    </main>
 {% endblock %}

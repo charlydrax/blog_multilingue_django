@@ -1,24 +1,46 @@
+<!DOCTYPE html>
 {%load static%}
-<html>
+{% load i18n %}
+<html lang="fr">
     <head>
         <title>Aventure d'un jardin</title>
         <link rel="stylesheet" href="{% static 'css/app.css' %}" />
+        <link rel="apple-touch-icon" sizes="180x180" href="{% static 'img/favicon/apple-touch-icon.png' %}">
+        <link rel="icon" type="image/png" sizes="32x32" href="{% static 'img/favicon/favicon-32x32.png' %}">
+        <link rel="icon" type="image/png" sizes="16x16" href="{% static 'img/favicon/favicon-16x16.png' %}">
+        <link rel="manifest" href="{% static 'img/favicon/site.webmanifest' %}">
     </head>
     <body>
-        <nav>
-            <ul>
-                <li><a href="#">Accueil</a></li>
-                <li><a href="{% url 'blog:blog' %}">Blog</a></li>
-                <li><a href="#">Contact</a></li>
-                <li><a href="#">A propos</a></li>
-            </ul>
-            {% comment %} <a href="{% url 'band-list' %}">Liste de musique</a>
-            <a href="{% url 'title-list' %}">Liste de Titre</a>
-            <a href="{% url 'contact' %}">Contact</a>
-            <a href="{% url 'about-us' %}">A propos</a> {% endcomment %}
-        </nav>
+        <header>
+            <nav>
+                <ul>
+                    <li><a href="{% url 'blog:home' %}">{% trans "Accueil" %}</a></li>
+                    <li><a href="{% url 'blog:blog' %}">{% trans "Blog" %}</a></li>
+                    <li><a href="{% url 'blog:about' %}">{% trans "A propos" %}</a></li>
+                    <li>
+                        <a href="#">
+                            <form method="post" action="{% url 'set_language' %}">
+                                {% csrf_token %}
+                                <input name="next" type="hidden" value="{{ request.path }}">
+                                <div class="container_select">
+                                    <div class="after_select">
+                                        <select class="select_lang" name="language" onchange="this.form.submit()">
+                                            <option value="en" {% if request.LANGUAGE_CODE == "en" %}selected{% endif %}>English</option>
+                                            <option value="fr" {% if request.LANGUAGE_CODE == "fr" %}selected{% endif %}>Français</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </form>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
 
         {% block content %}{% endblock %}
 
     </body>
+    <footer>
+        <p>&copy; 2025 Aventure d'un jardin</p>
+    </footer>
 </html>

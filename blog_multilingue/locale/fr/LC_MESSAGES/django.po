@@ -1,0 +1,98 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-02-14 16:22+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: .\blog\templates\about.html:7
+msgid "Qui suis-je 😁?"
+msgstr ""
+
+#: .\blog\templates\about.html:8
+msgid ""
+"Étudiant dévoué en Développement Web, prêt à en découdre avec les touts les "
+"bugs qui se mettront en travers de ma route 💪.Activement en recherche "
+"d'alternance, je suis disponible pour résoudre toutes missions que vous "
+"auraient à me confier🚀. J'attend votre appel avec impatience pour que l'on "
+"puisse travailler ensemble🤝."
+msgstr ""
+
+#: .\blog\templates\base.html:17
+msgid "Accueil"
+msgstr ""
+
+#: .\blog\templates\base.html:18
+msgid "Blog"
+msgstr ""
+
+#: .\blog\templates\base.html:19
+msgid "A propos"
+msgstr ""
+
+#: .\blog\templates\blog.html:5
+msgid "🌿 Bienvenue sur notre Blog"
+msgstr ""
+
+#: .\blog\templates\blog.html:14
+msgid "Lire la suite"
+msgstr ""
+
+#: .\blog\templates\home.html:7
+msgid "Bienvenue sur notre Blog des Nains de Jardin 🏡!"
+msgstr ""
+
+#: .\blog\templates\home.html:8
+msgid ""
+"Découvrez le monde fascinant des nains de jardin à travers des articles "
+"captivants et des histoires surprenantes."
+msgstr ""
+
+#: .\blog\templates\home.html:10
+msgid "Visiter le Blog"
+msgstr ""
+
+#: .\blog\templates\post_details.html:5
+msgid "page de details"
+msgstr ""
+
+#: .\blog\templates\post_details.html:17
+msgid "Publié le"
+msgstr ""
+
+#: .\blog\templates\post_details.html:18
+msgid "Dernière modification le"
+msgstr ""
+
+#: .\blog\templates\post_details.html:19
+msgid "Par"
+msgstr ""
+
+#: .\blog\templates\post_details.html:20
+msgid "Retour"
+msgstr ""
+
+#: .\blog\views.py:7
+msgid "Welcome"
+msgstr ""
+
+#: .\blog_multilingue\settings.py:114
+msgid "English"
+msgstr ""
+
+#: .\blog_multilingue\settings.py:115
+msgid "French"
+msgstr ""

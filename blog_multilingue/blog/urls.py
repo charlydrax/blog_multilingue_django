@@ -7,8 +7,10 @@ from . import views
 app_name = "blog"
 
 urlpatterns = [
+    path('', views.home, name="home"),
     path('blog/', views.post_list, name="blog"),
-    path('<slug:Slug>/', views.post_detail, name="post_detail"),
+    path('about/', views.about, name="about"),
+    path('<int:pk>/', views.post_detail, name="post_detail"),
 ]
 
 urlpatterns += static(settings.MEDIA_URL , document_root=settings.MEDIA_ROOT)

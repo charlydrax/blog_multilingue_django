@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% load i18n %}
+
+{% block content %}
+<main>
+    <div class="blog-container">
+        <h1 class="blog-title">{% trans "Qui suis-je 😁?" %}</h1>
+        <p>{% blocktranslate %}Étudiant dévoué en Développement Web, prêt à en découdre avec les touts les bugs qui se mettront en travers de ma route 💪.Activement en recherche d'alternance, je suis disponible pour résoudre toutes missions que vous auraient à me confier🚀. J'attend votre appel avec impatience pour que l'on puisse travailler ensemble🤝.{% endblocktranslate %}</p>
+        <p class="margin_link underline"><a href="mailto:charlyplanquettepro">charlyplanquettepro@gmail.com</a>
+            <svg
+                stroke-width="2"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                fill="none"
+                class="svg_arrow"
+                xmlns="http://www.w3.org/2000/svg"
+                width="20px"
+            >
+                <path
+                d="M14 5l7 7m0 0l-7 7m7-7H3"
+                stroke-linejoin="round"
+                stroke-linecap="round"
+                ></path>
+            </svg>
+        </p>
+        <p class="underline_2"><a href="https://charly-planquette.com/static/media/CharlyPlanquetteCV.924c9025d2f29c094dc4.pdf" target="_blank">Mon CV</a></p>
+    </div>
+</main>
+{% endblock %}

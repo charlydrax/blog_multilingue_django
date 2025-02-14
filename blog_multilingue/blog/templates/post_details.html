@@ -1,4 +1,24 @@
 {% extends 'base.html'%}
+{% load i18n %}
 {% block content %}
-    <h1>page de details</h1>
+    <div class="blog-container">
+        <h1 class="blog-title">{% trans "page de details"%}</h1>
+        {% if post %}
+        {% comment %} {% for post in post %} {% endcomment %}
+        <div class="post">
+            <h2 class="post-title">{{ post.title }}</h2>
+            <div class="post-content">
+                <img src="{{ post.image.url }}" alt="{{ post.title }}" class="post-image">
+                <p>{{ post.content }}</p>
+            </div>
+                {% comment %} Publié le <span>{{ post.date }}</span> par <span>{{ post.author }}</span> {% endcomment %}
+                <p class="post-meta">{%trans "Publié le"%} <span>{{ post.created_on }}</span></p>
+                <p class="post-meta">{% trans "Dernière modification le"%} <span>{{ post.updated_on }}</span></p>
+                <p class="post-meta">{% trans "Par"%} <span>{{ post.author }}</span></p>
+            <a href="{% url 'blog:blog' %}" class="post-link">{% trans "Retour"%}</a>
+        </div>
+        {% comment %} {% endfor %} {% endcomment %}
+        {% endif %}
+    
+    </div>
 {% endblock %}
